@@ -4,8 +4,7 @@
 <title>Upload</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Photo-Hub Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<meta name="keywords" content="" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -66,13 +65,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<div class="register">
 		<div class="container">
-			<ul class="nav nav-pills" role="tablist">
-  		<li role="presentation" class="active"><a href="upload.html">Image</a></li>
-  		<li role="presentation"><a href="uploadProjet.html">Projet</a></li>
-		</ul>
+
+				<div class="btn-group btn-group-justified">
+  				<div class="btn-group">
+    				<input type="button" class="btn btn-default" value="images" onclick="showTab1();"></input>
+  				</div>
+  				<div class="btn-group">
+    			<input type="button" class="btn btn-default" value="projet" onclick="showTab2();"></input>
+  				</div>
+				</div>
 		<br>
 
-			<form role="form">
+			<form id="t1" role="form">
 			<div class="form-group">
 			<label for="exampleInputinfo">Titre de l'image</label>
 			<input type="titre" class="form-control" >
@@ -87,26 +91,55 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   		</div>
 
 			<form enctype="multipart/form-data">
-
 					<div class="form-group">
 							<input id="file-1" type="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="2">
 					</div>
-
 			</form>
 
 			</form>
+			<div id="b1" class="register-but" >
+				 <form>
+					 <input type="submit" value="Publié">
+					 <div class="clearfix"> </div>
+				 </form>
+			</div>
 
+			<form id="t2" role="form" style="display:none">
+			<div class="form-group">
+			<label for="exampleInputinfo">Titre du projet</label>
+			<input type="titre" class="form-control" >
+			</div>
+			<div class="form-group">
+			<label for="exampleInputinfo">Format</label>
+			<input type="password" class="form-control">
+			</div>
+			<div class="form-group">
+			<label for="exampleInputinfo">date de publié</label>
+			<input type="titre" class="form-control" >
+			</div>
+
+			<div class="form-group">
+			<label for="text">Conditions</label>
+			<textarea class="form-control" rows="3"></textarea>
+			</div>
+			<div class="form-group">
+			<label for="text">Description</label>
+			<textarea class="form-control" rows="3"></textarea>
+			</div>
+			<form enctype="multipart/form-data"></form>
 				<div class="clearfix"> </div>
-				<div class="register-but">
-				   <form>
-					   <input type="submit" value="submit">
-					   <div class="clearfix"> </div>
-				   </form>
-				</div>
+
+			</form>
+			<div id="b2" class="register-but" style="display:none">
+				 <form>
+					 <input type="submit" value="publié">
+					 <div class="clearfix"> </div>
+				 </form>
+			</div>
 
 
-		   </div>
-	</div>
+			 </div>
+		 </div>
 	<div class="grid_2">
 		<div class="container">
 			<div class="col-md-3 col_2">
@@ -188,5 +221,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			}
 });
 
+</script>
+<script>
+function showTab1(){
+    document.getElementById("t1").style.display = "block";
+		document.getElementById("b1").style.display = "block";
+    document.getElementById("t2").style.display = "none";
+		document.getElementById("b2").style.display = "none";
+
+}
+function showTab2(){
+    document.getElementById("t1").style.display = "none";
+    document.getElementById("t2").style.display = "block";
+		document.getElementById("b2").style.display = "block";
+		document.getElementById("b1").style.display = "none";
+}
 </script>
 </html>

@@ -235,6 +235,10 @@ fieldset#body {
 input:focus {
     outline:none;
 }
+
+.t2{
+  display: none;
+}
 .banner{
 	background:url(../images/2.jpg)no-repeat center top;
 	background-size:cover;
@@ -321,7 +325,7 @@ input:focus {
 #search_text:focus {
 	background: rgb(64, 151, 119);
 }
-#search_button {
+#search_submit {
 	border: 0 none;
 	background:#eee2c3 url(../images/search.png) center no-repeat;
 	width: 60px;
@@ -336,6 +340,26 @@ input:focus {
 	-moz-border-radius: 0px;
 	-o-border-radius: 0px;
 }
+
+
+.fileInputContainer{
+        height:256px;
+        background:url(../images/Uploadiamge.png);
+        position:relative;
+        width: 256px;
+    }
+    .fileInput{
+        height:256px;
+        font-size: 300px;
+        position:absolute;
+        right:0;
+        top:0;
+        opacity: 0;
+        filter:alpha(opacity=0);
+        cursor:pointer;
+    }
+
+
 #options a{
 	border-left: 0 none;
 }
